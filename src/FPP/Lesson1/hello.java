@@ -1,4 +1,4 @@
-package FPP.Lab1;
+package FPP.Lesson1;
 
 import javax.swing.*;
 

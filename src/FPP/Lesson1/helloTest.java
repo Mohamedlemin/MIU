@@ -1,7 +1,6 @@
-package FPP.Lab1;
+package FPP.Lesson1;
 
 import static org.junit.gen5.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
 
 class helloTest {
 

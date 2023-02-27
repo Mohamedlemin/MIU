@@ -4,6 +4,12 @@ import javax.swing.*;
 
 public class hello {
     public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null,"Hello Mohamed lemin");
+        sayHello();
+    }
+    public static String sayHello(){
+        String msg = "Hello Mohamed lemin";
+        JOptionPane.showMessageDialog(null,msg);
+
+        return msg;
     }
 }

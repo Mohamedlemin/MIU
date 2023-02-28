@@ -21,6 +21,8 @@ public class dataType {
         System.out.println(s);
 
 
+        System.out.println( Math.floorDiv(-5,2));
+
 
     }
 }

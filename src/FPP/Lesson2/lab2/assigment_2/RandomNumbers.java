@@ -1,4 +1,4 @@
-package FPP.Lesson2;
+package FPP.Lesson2.lab2.assigment_2;
 
 import java.util.*;
 

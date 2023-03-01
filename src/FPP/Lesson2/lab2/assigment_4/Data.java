@@ -1,4 +1,4 @@
-package FPP.Lesson2;
+package FPP.Lesson2.lab2.assigment_4;
 
 public class Data {
 	//column names:   productId, name,numInStock,provider,pricePerUnit

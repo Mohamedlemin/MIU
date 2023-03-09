@@ -8,17 +8,19 @@ import java.util.GregorianCalendar;
 public class Main {
 
     public static void main(String[] args) {
-        // Get LocalDate for Jan 2, 1970
-        LocalDate localDate = LocalDate.of(1970, 1, 2);
+      Integer _k =0 ;
+     char m =65;
+        System.out.println(m+""+_k);
+        System.out.println(reverse("hello"));
 
-        // Convert LocalDate to Date and get time in milliseconds
-        Date date = dateFromLocalDate(localDate);
-        long timeMillis = date.getTime();
+    }
+    public static String reverse(String input){
 
-        // Compute number of hours from start of Jan 1, 1970 to start of Jan 2, 1970
-        long hours = timeMillis / (1000 * 60 * 60);  // 1 hour = 1000 ms * 60 sec * 60 min
-
-        System.out.println("Number of hours from start of Jan 1, 1970 to start of Jan 2, 1970: " + hours);
+        String output ="";
+        for(int i =input.length()-1 ; i>=0 ;i--){
+            output+=input.charAt(i);
+        }
+        return output;
     }
 
     public static Date dateFromLocalDate(LocalDate localDate) {

@@ -1,0 +1,16 @@
+
+Programming Assignment 8-1
+Include versions of the methods in MinSort and BinSearchIterative in your
+MyStringList class. The code for these algorithms, as applied to integer arrays, is in a
+folder in this directory. (Remember that you already included sorting in your
+MyStringList in one of the in-class exercises. You may re-use that work here.) Include in
+your main method the following tests for your sorting and searching methods:
+a. Sort the following list
+["big", "small", "tall", "short", "round", "square",
+"enormous", "tiny","gargantuan", "lilliputian",
+"numberless", "none", "vast", "miniscule"]
+
+b. Take the list sorted in part a. and attempt binary searches for each of the
+following:
+• "number"
+• "tiny"

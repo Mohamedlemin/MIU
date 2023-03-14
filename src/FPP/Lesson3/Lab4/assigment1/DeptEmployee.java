@@ -16,6 +16,9 @@ public class DeptEmployee {
    public  double computeSalary(){
         return salary;
    }
+   public  double computeSalary(int a){
+        return salary;
+   }
 
 
 

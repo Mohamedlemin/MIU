@@ -5,17 +5,19 @@ public class Top {
     Middle mid;
     Middle.Bottom midbot;
     //returns the value in the instance vble of Bottom
+    Top(){
+        mid  = new Middle();
+        midbot = mid.new Bottom();
+    }
     int readBottom() {
-        //implement
-        return 0;
+        return midbot.b;
     }
     class Middle {
         int m = 2;
         //returns sum of instance vble in Top and
         //instance vble in Bottom
         int addTopAndBottom() {
-            //implement
-            return 0;
+            return t+ midbot.b;
         }
         class Bottom {
             int b = 3;
@@ -23,7 +25,7 @@ public class Top {
             //in all three classes
             int multiplyAllThree() {
                 //implement
-                return 0;
+                return t * m * b;
             }
         }
     }

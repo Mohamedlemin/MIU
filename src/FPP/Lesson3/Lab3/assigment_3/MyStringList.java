@@ -1,4 +1,4 @@
-package prog3_3_soln;
+package FPP.Lesson3.Lab3.assigment_3;
 
 public class MyStringList {
 	private final int INITIAL_LENGTH = 2;
@@ -21,7 +21,34 @@ public class MyStringList {
 		}
 		return strArray[i];
 	}
-	
+
+	public void minSort(){
+		if (strArray == null || strArray.length<=1) return;
+		int len = strArray.length;
+		for (int i = 0; i < len; i++) {
+			int nexMinPos = minPos(i,len-1);
+			swap(i,nexMinPos);
+		}
+
+	}
+	public int  minPos(int i , int j){
+     int pos = i; 
+     String min = strArray[i];
+		for (int k = i; k <= j ; ++k) {
+			if(strArray[k].compareTo(min)<0){
+				pos = k;
+				min = strArray[k];
+			}
+		}
+		return pos;
+	}
+
+	public void swap(int i, int j ){
+		String temp  = strArray[i];
+		strArray[i] = strArray[j];
+		strArray[j] = temp;
+	}
+
 	public boolean find(String s){
 		for(String test : strArray){
 			if(test.equals(s)) { 
@@ -99,7 +126,12 @@ public class MyStringList {
 		l.insert("Richard",3);
 		System.out.println("The list of size "+l.size()+" after inserting Richard into pos 3 is "+l);
 		l.insert("Tonya",0);
-		System.out.println("The list of size "+l.size()+" after inserting Tonya into pos 0 is "+l);		
+		System.out.println("The list of size "+l.size()+" after inserting Tonya into pos 0 is "+l);
+		System.out.println(l.toString());
+		l.minSort();
+		System.out.println(l.toString());
+
+
 	}
 
 }

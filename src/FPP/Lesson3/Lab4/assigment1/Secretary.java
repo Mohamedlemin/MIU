@@ -12,7 +12,7 @@ public class Secretary extends DeptEmployee{
 
 
     @Override
-    public final double computeSalary(){
+     public final double computeSalary(){
         double salary = super.computeSalary();
         return salary + 12*overtimeHours;
     }

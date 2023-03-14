@@ -1,0 +1,14 @@
+
+Programming Assignment 8-3
+In the sample code in the supplementary code folder, there are classes Employee,
+NameComparator, and EmployeeSort in the employeesort package.
+Add code according to the following specifications:
+1. Create a SalaryComparator class whose compareTo method orders
+Employee objects in increasing order of salary.
+2. Create a HireDateComparator class whose compareTo method orders
+Employee objects in increasing date of hire.
+3. Write additional code in the EmployeeSort constructor which, after the “sort by
+name” operation is done and outputs results to the console (code has already been
+written), then sorts by salary, outputs results to the console, and then sorts by hire
+date, and outputs to console.
+4. Make sure your Comparator implementations are consistent with equals.

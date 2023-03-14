@@ -13,26 +13,60 @@ public class MyStringList {
 	/******* sorting methods ********/
 	public void minSort(){
 		//implement
+		if (strArray == null || size <=1 ) return;
+		for (int i = 0; i < size; i++) {
+           int nextMinPos  = minpos(i,size-1);
+           swap(i,nextMinPos);
+		}
 	}
 	void swap(int i, int j){
 		//implement
+		String temp = strArray[i];
+		strArray[i] =strArray[j];
+		strArray[j] = temp;
 		
 	}
 	//find minimum of arr between the indices bottom and top
 	public int minpos(int bottom, int top){		
 		//implement
-		return -1;
+		int pos = bottom;
+		String min = strArray[bottom];
+		for (int i = bottom; i <= top ; i++) {
+			if (strArray[i].compareTo(min)<0){
+				min=strArray[i];
+				pos  = i;
+			}
+		}
+		return pos;
 	}
 
 	/********* end sorting methods ********/
 	
 	/******** binary search methods ********/
-	
-	//search a sorted array
+
+	// search a sorted array
 	boolean binSearchIt(String val) {
-	    //implement
-		return false;
+		if (strArray == null || size == 0) {
+			return false; // empty array or null
+		}
+		return recSearch(0, size - 1, val);
 	}
+
+	boolean recSearch(int lower, int upper, String x) {
+		if (lower > upper) {
+			return false; // search range is invalid
+		}
+		int mid = lower + (upper - lower) / 2;
+		if (x.equals(strArray[mid])) {
+			return true; // value found
+		}
+		if (strArray[mid].compareTo(x) > 0) {
+			return recSearch(lower, mid - 1, x); // search left half
+		} else {
+			return recSearch(mid + 1, upper, x); // search right half
+		}
+	}
+
 
 	/********* end binary search methods *****/
 	
@@ -115,6 +149,7 @@ public class MyStringList {
 		for(int i = 0; i < testArr.length; ++i) {
 			list.add(testArr[i]);
 		}
+		System.out.println(list);
 		list.minSort();
 		System.out.println("The list in sorted order:");
 		System.out.println(list.toString());

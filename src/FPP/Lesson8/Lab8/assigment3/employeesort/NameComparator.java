@@ -1,6 +1,7 @@
 package FPP.Lesson8.Lab8.assigment3.employeesort;
 
 import java.util.Comparator;
+import java.util.Date;
 
 public class NameComparator implements Comparator<Employee> {
 
@@ -32,4 +33,4 @@ public class NameComparator implements Comparator<Employee> {
 }
 
 	
-}
+

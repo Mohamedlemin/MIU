@@ -7,6 +7,7 @@ import java.util.List;
 
 public class EmployeeSort {
 
+
 	public static void main(String[] args) {
 		new EmployeeSort();
 
@@ -17,10 +18,14 @@ public class EmployeeSort {
 			 new Employee("Dave", 50000, 2000, 1, 3),
 			 new Employee("Richard", 45000, 2001, 2, 7)};
 		List<Employee> empList = Arrays.asList(empArray);
-		NameComparator nameComp = 
-			new NameComparator();
+		NameComparator nameComp = new NameComparator();
+		SalaryComparator SalaryComp = new SalaryComparator();
+		HireDateComparator HireDateComp = new HireDateComparator();
 		Collections.sort(empList, nameComp);
-		
+		System.out.println(empList);
+		Collections.sort(empList, SalaryComp);
+		System.out.println(empList);
+		Collections.sort(empList, HireDateComp);
 		System.out.println(empList);
 		
 	}

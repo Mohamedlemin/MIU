@@ -26,6 +26,7 @@ public class Employee {
 	public int getSalary() {
 		return salary;
 	}
+
 	public final boolean equals(Object o){
 		if(o==null) return false;
 		if(o.getClass() != this.getClass()) {
@@ -39,9 +40,9 @@ public class Employee {
 	
 	public String toString() {
 		String newline = System.getProperty("line.separator");
-		return newline+"EMPLOYEE "+name+newline+
-				"Date of Hire: "+hireDate+newline+
-				"Salary: "+salary+newline;
+		return "["+name+
+				", "+hireDate+
+				", "+salary;
 	}
 
 	

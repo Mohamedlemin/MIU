@@ -1,34 +1,51 @@
 package FPP.Lesson8.Lab8.assigment4;
 
 public class MyTable {
-	private Entry[] entries;
-	
-	//returns the String that is matched with char c in the table
-	public String get(char c){
-		//implement
-		return null;
-	}
-	//adds to the table a pair (c, s) so that s can be looked up using c 
+	private Entry[] entries = new Entry[26];
+
 	public void add(char c, String s) {
-		//implement
+		int index = c - 'a';
+		entries[index] = new Entry(c, s);
 	}
-	//returns a String consisting of nicely formatted display
-	//of the contents of the table
-	public String toString() {
-		//implement
-		return null;
-	}
-	
-	
-	private class Entry {
-		Entry(String str, char ch){
-			//implement
-		}
-		//returns a String of the form "ch->str" 
-		public String toString() {
-			//implement
+
+	public String get(char c) {
+		int index = c - 'a';
+		if (entries[index] != null) {
+			return entries[index].getValue();
+		} else {
 			return null;
 		}
 	}
 
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for (Entry e : entries) {
+			if (e != null) {
+				sb.append(e.toString()).append("\n");
+			}
+		}
+		return sb.toString();
+	}
+
+	private class Entry {
+		private char key;
+		private String value;
+
+		public Entry(char key, String value) {
+			this.key = key;
+			this.value = value;
+		}
+
+		public char getKey() {
+			return key;
+		}
+
+		public String getValue() {
+			return value;
+		}
+
+		public String toString() {
+			return key + "->" + value;
+		}
+	}
 }

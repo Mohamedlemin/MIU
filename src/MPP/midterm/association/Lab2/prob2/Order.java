@@ -1,4 +1,4 @@
-package MPP.Week1.Lab2.prob2;
+package MPP.midterm.association.Lab2.prob2;
 
 import java.util.ArrayList;
 import java.util.List;

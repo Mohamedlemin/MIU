@@ -1,4 +1,4 @@
-package MPP.Week1.Lab2.prob1;
+package MPP.midterm.association.Lab2.prob1;
 
 public class GradeReport {
     Student std;

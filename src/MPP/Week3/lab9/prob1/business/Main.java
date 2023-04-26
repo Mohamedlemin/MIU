@@ -53,7 +53,7 @@ public class Main {
 		bs.addAll(books);
 		//implement
 		return bs.stream()
-				.filter(book -> book.getAuthors().size() > 1)
+				.filter(book -> book.getAuthors().size() > 2)
 				.map(Book::getIsbn)
 				.collect(Collectors.toList());
 

@@ -1,7 +1,6 @@
-package MPP.Week3.lab9.prob11a;
+package MPP.Week3.practice.lab9Part2.prob11a;
 
 import java.util.*;
-import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -21,26 +20,18 @@ public class Main {
 				new Employee("Alice", "Richards", 101000),
 				new Employee("Donald", "Trump", 100000));
 
-		Predicate<Employee> SalaryGreatThan10Th = (a) -> a.getSalary() > 100000;
-		Predicate<Employee> LastNameStartWithN_z = (a) -> a.getLastName().charAt(0)>='N';
+		System.out.println(/*implement */);
 
-		emps.stream()
-				.filter(SalaryGreatThan10Th.and(LastNameStartWithN_z))
-				.map(employee -> employee.getFirstName() + " " + employee.getLastName())
+		Predicate<Employee> bySalary = (a) -> a.getSalary() > 100000;
+		Predicate<Employee> StartFrom = (a) -> a.getLastName().charAt(0)>='N';
+
+		List<String> empsFiltered =emps.stream()
+				.filter(bySalary.and(StartFrom))
+				.map(emp -> emp.getFirstName() + " " + emp.getLastName())
 				.sorted()
-				.forEach(System.out::println);
+				.collect(Collectors.toList());
 
-
-//		String str = "123";
-//		int num = Integer.parseInt(str);
-//		System.out.println(num);
-//
-//
-//		String str4 = "123";
-//		Function<String, Integer> num4 = Integer::parseInt;
-//		num4.apply(str4);
-
-
+		System.out.println(empsFiltered);
 
 
 	}

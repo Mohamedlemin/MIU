@@ -1,6 +1,7 @@
-package MPP.Week3.lab9.prob11b;
+package MPP.Week3.practice.lab9Part2.prob11b;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 
 public class Main {
@@ -16,11 +17,8 @@ public class Main {
 				new Employee("Alice", "Richards", 101000),
 				new Employee("Donald", "Trump", 100000));
 
-
-		List<String> getFullNameFiltered = LambdaLibrary.getFirstAndLastName.apply(
-				list,100000.1,'N'
-		);
-		System.out.println(getFullNameFiltered);
+		System.out.println(LambdaLibrary.FilterBySalaryAndLastName.apply(list,100000.3,'N'));
 
 	}
+
 }

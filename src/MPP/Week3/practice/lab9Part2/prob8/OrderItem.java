@@ -1,4 +1,4 @@
-package MPP.Week3.lab9.prob8;
+package MPP.Week3.practice.lab9Part2.prob8;
 
 public class OrderItem {
 	private Product product;
@@ -12,7 +12,7 @@ public class OrderItem {
 	}
 	@Override
 	public String toString() {
-		return "   " + product.getProductName() + ": " + quantityRequested + ", " + product.getUnitPrice();
+		return "   " + product.getProductId() + ": " + quantityRequested + ", " + product.getUnitPrice();
 	}
 	public Product getProduct() {
 		return product;

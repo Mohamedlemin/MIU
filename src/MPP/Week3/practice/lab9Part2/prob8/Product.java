@@ -1,4 +1,4 @@
-package MPP.Week3.lab9.prob8;
+package MPP.Week3.practice.lab9Part2.prob8;
 
 public class Product {
 	private String productId;
@@ -17,17 +17,5 @@ public class Product {
 	}
 	public double getUnitPrice() {
 		return unitPrice;
-	}
-
-	public void setProductId(String productId) {
-		this.productId = productId;
-	}
-
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
-
-	public void setUnitPrice(double unitPrice) {
-		this.unitPrice = unitPrice;
 	}
 }
